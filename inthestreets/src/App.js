@@ -1,17 +1,30 @@
 import React from 'react';
 import './App.css';
-import './components/MapView';
-import MapView from './components/MapView';
+import './components/MapView/MapView';
+import MapView from './components/MapView/MapView';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { NavigationBar } from './components/NavigationBar/NavigationBar';
+import { Home } from './containers/Home/Home';
+import { About } from './containers/About/About';
+import { NoMatch } from './containers/NoMatch/NoMatch';
+import Sidebar from './components/SideNavigationBar/SideNavigationBar';
 
 function App() {
   return (
-    <div className="App">
-      <div className="MapView">
-          <MapView />
-        </div>
-      <header className="App-header">
-      </header>
-    </div>
+    <React.Fragment>
+      <Router>
+        <NavigationBar />
+        <Sidebar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route component={NoMatch} />
+        </Switch>
+      </Router>
+    </React.Fragment>
+
+    
   );
 }
 
