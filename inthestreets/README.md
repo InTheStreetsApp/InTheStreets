@@ -1,5 +1,26 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Automatically format your code with ESLint
+
+ESLint will follow the [Airbnb style guide](https://airbnb.io/javascript/react/) for React to autoformat your code.
+
+### Install eslint and all dependencies
+- Run `npm install`.
+
+### Setup for VS Code
+- Download the VS Code extension: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+- Add the following to your `.vscode/settings.json` (create it at the project root if it doesn't exist):
+```json
+{
+  "files.eol": "\n",
+  "eslint.run": "onType",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+}
+```
+Now ESLint will highlight all your style problems and format your code when you save!
+
 ## Available Scripts
 
 In the project directory, you can run:
