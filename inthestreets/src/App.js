@@ -9,6 +9,7 @@ import { Home } from './containers/Home/Home';
 import { About } from './containers/About/About';
 import { NoMatch } from './containers/NoMatch/NoMatch';
 import Sidebar from './components/SideNavigationBar/SideNavigationBar';
+import { Events } from './containers/Events/Events';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
+          <Route path="/events" component={Events} />
           <Route component={NoMatch} />
         </Switch>
       </Router>

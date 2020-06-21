@@ -7,8 +7,8 @@ const Wrapper = styled.div`
   margin-right: 6em;
 `;
 
-export const NoMatch = () => (
-  <Wrapper>
-    <h2>No Match</h2>
-  </Wrapper>
-)
+export const Events = () => (
+    <Wrapper>
+      <h2>Events</h2>
+    </Wrapper>
+  )

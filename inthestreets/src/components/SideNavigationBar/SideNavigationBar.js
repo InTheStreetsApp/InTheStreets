@@ -25,16 +25,22 @@ class SideNav extends React.Component {
               key: 1 /* Key is required, else console throws error. Does this please you Mr. Browser?! */
             },
             {
+                path: '/events',
+                name: 'Events',
+                css: 'fa fa-fw fa-map-marker',
+                key: 2
+              },
+            {
               path: '/about',
               name: 'About',
               css: 'fa fa-fw fa-clock',
-              key: 2
+              key: 3
             },
             {
               path: '/NoMatch',
               name: 'NoMatch',
               css: 'fas fa-hashtag',
-              key: 3
+              key: 4
             },
           ]
         }  
